@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace EloquentORM\Events;
 
 abstract class Event
 {
