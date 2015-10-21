@@ -16,7 +16,7 @@
             </tr>
         </thead>
         <tbody>
-            @include('query.partials.list-users')
+            @include('partials.list-users')
         </tbody>
     </table>
 </div>
