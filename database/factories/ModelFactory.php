@@ -16,6 +16,8 @@ $factory->define(EloquentORM\User::class, function (Faker\Generator $faker) {
         'name' => $faker->name,
         'email' => $faker->email,
         'password' => bcrypt(str_random(10)),
-        'remember_token' => str_random(10),
+        'gender' => $faker->randomElement(['f', 'm']),
+        'biography' => $faker->text(rand(100, 255)),
+        'remember_token' => $faker->randomElement([null, str_random(10)]),
     ];
 });
