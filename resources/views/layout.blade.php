@@ -19,6 +19,7 @@
                         <a href="{{ route('home') }}">Home</a>
                     </li>
                     @include('partials.menu-query')
+                    @include('partials.menu-eloquent-n2')
                 </ul>
             </div>
         </nav>

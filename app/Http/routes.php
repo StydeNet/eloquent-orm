@@ -50,3 +50,15 @@ Route::get('/paginate', [
     'as' => 'paginate',
     'uses' => 'QueryController@eloquentPaginate'
 ]);
+
+//Eloquent Nivel 2
+
+Route::get('/delete-items', [
+    'as' => 'getDeleteItems',
+    'uses' => 'UserController@getDeleteItems'
+]);
+
+Route::delete('/delete-items', [
+    'as' => 'deleteItems',
+    'uses' => 'UserController@deleteItems'
+]);

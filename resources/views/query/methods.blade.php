@@ -6,7 +6,7 @@
         {{ $title }}
     </h1>
     <table class="table table-hover table-striped">
-        @include('partials.list-users')
+        @include('partials.head-users')
         <tbody>
             @include('partials.list-users')
         </tbody>
