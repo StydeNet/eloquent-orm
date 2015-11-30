@@ -9,5 +9,10 @@
                 Eliminar varios items
             </a>
         </li>
+        <li>
+            <a href="{{ route('getBooks') }}">
+                SoftDeletes (Books)
+            </a>
+        </li>
     </ul>
 </li>

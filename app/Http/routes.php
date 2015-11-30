@@ -62,3 +62,13 @@ Route::delete('/delete-items', [
     'as' => 'deleteItems',
     'uses' => 'UserController@deleteItems'
 ]);
+
+Route::get('/softDeletes', [
+    'as' => 'getBooks',
+    'uses' => 'BookController@getBooks'
+]);
+
+Route::delete('/softDeletes', [
+    'as' => 'delBooks',
+    'uses' => 'BookController@delBooks'
+]);
