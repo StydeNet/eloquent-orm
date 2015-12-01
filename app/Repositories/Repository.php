@@ -28,8 +28,17 @@ abstract class Repository {
                 ->find($id);
     }
     
+    public function getId($id){
+        return $this->entity
+                ->find($id);
+    }
+    
     public function restore($entity){
         $entity->restore();
+    }
+    
+    public function forceDelete($entity){
+        $entity->forceDelete();
     }
 
     public function getAll($paginate = false){
@@ -41,7 +50,8 @@ abstract class Repository {
     }
     
     public function delete($id){
-        
+        $entity = $this->getId($id);
+        $entity->delete();
     }
     
     public function destroy(array $ids){

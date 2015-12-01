@@ -42,4 +42,17 @@ class BookController extends Controller
         return back();
     }
     
+    public function forceDelete($id){
+        $book = $this->books->getIdTrashed($id);
+        $this->books->forceDelete($book);
+        
+        return back();
+    }
+    
+    public function deleteBook($id){
+        $this->books->delete($id);
+        
+        return back();
+    }
+    
 }

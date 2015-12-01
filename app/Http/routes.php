@@ -82,3 +82,13 @@ Route::get('/restore/{id}', [
     'as' => 'restore',
     'uses' => 'BookController@restore'
 ]);
+
+Route::delete('/forceDelete/{id}', [
+    'as' => 'forceDelete',
+    'uses' => 'BookController@forceDelete'
+]);
+
+Route::delete('/delete-book/{id}', [
+    'as' => 'delete-book',
+    'uses' => 'BookController@deleteBook'
+]);
