@@ -2,16 +2,7 @@
 
 @section('content')
 <div class="container">
-    <h1 class="page-header">
-        SoftDeletes (Books)
-    </h1>
-    <p>
-        {{ $books->total() }} Registros |
-        Página {{ $books->currentPage() }} 
-        de {{ $books->lastPage() }}
-    </p>
-    {!! Form::open(['route' => 'delBooks', 'method' => 'delete']) !!}
-    {!! Form::submit('Papelera', ['class' => 'btn btn-danger']) !!}
+    @include('books.partials.header')
     <table class="table table-hover table-striped">
         <tbody>
             @foreach($books as $book)

@@ -21,4 +21,10 @@ class BookRepositories extends Repository {
         return new Book;
     }
     
+    public function getTrashed(){
+        return $this->entity
+                ->withTrashed()
+                ->paginate();
+    }
+    
 }

@@ -17,7 +17,6 @@ class BookController extends Controller
         $this->books = $bookRepositories;
     }
 
-
     public function getBooks() {
         $books = $this->books->getAll($paginate = true);
         return view('books.index', compact('books'));
@@ -28,6 +27,18 @@ class BookController extends Controller
         if(count($ids)){
             $this->books->destroy($ids);
         }
+        return back();
+    }
+    
+    public function getTrashed() {
+        $books = $this->books->getTrashed();
+        return view('books.trashed', compact('books'));
+    }
+    
+    public function restore($id){
+        $book = $this->books->getIdTrashed($id);
+        $this->books->restore($book);
+        
         return back();
     }
     

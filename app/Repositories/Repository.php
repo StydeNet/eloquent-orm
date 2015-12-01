@@ -21,6 +21,16 @@ abstract class Repository {
     }
 
     abstract public function getEntity();
+    
+    public function getIdTrashed($id){
+        return $this->entity
+                ->withTrashed()
+                ->find($id);
+    }
+    
+    public function restore($entity){
+        $entity->restore();
+    }
 
     public function getAll($paginate = false){
         $q = $this->entity;

@@ -72,3 +72,13 @@ Route::delete('/softDeletes', [
     'as' => 'delBooks',
     'uses' => 'BookController@delBooks'
 ]);
+
+Route::get('/trashed', [
+    'as' => 'trashed',
+    'uses' => 'BookController@getTrashed'
+]);
+
+Route::get('/restore/{id}', [
+    'as' => 'restore',
+    'uses' => 'BookController@restore'
+]);
